@@ -1,0 +1,25 @@
+# --- Base de données locale ---
+db.sqlite3
+*.db
+
+# --- Fichiers de configuration sensibles ---
+.env
+local_settings.py
+.env.*
+# --- Environnements virtuels ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Caches Python ---
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- Fichiers système ou d'IDE (Optionnel mais recommandé) ---
+.DS_Store
+.idea/
+.vscode/
