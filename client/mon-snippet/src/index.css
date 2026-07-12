@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+/* style de l'app principal(App.jsx)*/
+.main-container{
+    background-color: #f0ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style de l'app header (Header.jsx)*/
+
+.titre-header{
+    color: #f0ffff;
+    background-color: rgba(19, 16, 212, 0.966);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header-bg{
+    /* background-color: #c450e7; */
+    background-image: url('./assets/header.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+.slogan{
+    color: #f0ffff;
+    font-weight: bold;
+}
+
+/* Sytle des éléments de l'app Accueil */
+
+.container{
+    padding: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20;
+}
+
+.container div{
+    margin-bottom: 15px;
+    display: grid;
+    margin: 10px;
+}
+
+.container div p{
+    color: rgb(248, 245, 245);
+    font-weight: bold;
+    font-size: 9pt;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background-color: rgb(67, 67, 235);
+    width: 60px;
+    padding: 4px;
+}
+
+i{
+    background-color: #e6e6fa;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+}
