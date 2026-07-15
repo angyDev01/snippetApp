@@ -10,7 +10,7 @@ function CodeSnippet({ code, language }) {
         language={language.toLowerCase()} 
         style={vscDarkPlus}
         showLineNumbers={true}
-        customStyle={{ margin: 0 }} // Nettoie les marges par défaut
+        customStyle={{ margin: 0 , padding: 10}} // Nettoie les marges par défaut
       >
         {code}
       </SyntaxHighlighter>

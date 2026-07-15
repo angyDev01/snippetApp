@@ -3,6 +3,11 @@ import { useState, useEffect } from "react";
 // Importation de l'instance configurée d'Axios pour faire les requêtes HTTP vers l'API
 import api from '../api/axiosInstance';
 import CodeSnippet from './CodeSnippet';
+import LangueStyle from './LangueStyle'
+import FormatDjangoDate from './FormatDjangoDate'
+
+
+
 
 function Acceuil() {
     const [snippets, setSnippets] = useState([]);  
@@ -40,15 +45,17 @@ function Acceuil() {
                 // Sinon, on génère une liste HTML à partir du tableau 'snippets'
                 <div className="container">
                     {/* transforme chaque objet 'snippet' pour l'affiche */}
-                    {snippets.map(({id, title, language, code}) => (
+                    {snippets.map(({id, title, language, code, created_at}) => (
                         // La prop 'key' est obligatoire pour que React identifie chaque élément de manière unique
                         <div key={id}>
-                            {title}
-                            <p>{language}</p>
-                           <CodeSnippet 
-                                code={code} 
-                                language={language} 
+                            <h1>{title}</h1>
+                            <LangueStyle langage={language} />
+                            
+                            <CodeSnippet 
+                                    code={code} 
+                                    language={language} 
                             />
+                            <p className="date">Publié le <FormatDjangoDate date={created_at} /></p>
                         </div>
                     ))}
                 </div>

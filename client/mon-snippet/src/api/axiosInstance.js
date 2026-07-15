@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiUrl = import.meta.env.API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 // On crée une instance personnalisée d'Axios
 const api = axios.create({
   // URL de base de votre API (ex: votre backend Python/Node)

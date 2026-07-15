@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 100%;
+    width: 100%;
     font-family: 'Inter', sans-serif;
 }
 /* style de l'app principal(App.jsx)*/
@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 /* style de l'app header (Header.jsx)*/
@@ -33,6 +34,8 @@ body{
     background-color: rgba(19, 16, 212, 0.966);
     border-radius: 10px;
     padding: 10px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .header-bg{
@@ -40,44 +43,131 @@ body{
     background-image: url('./assets/header.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 300px;
+    height: 280px;
 }
 
 .slogan{
-    color: #f0ffff;
-    font-weight: bold;
+    color: #f5f4fc;
+    font-weight: 700;
+    margin: 16px 0;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* Sytle des éléments de l'app Accueil */
 
 .container{
-    padding: 50px;
-    width: 100%;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:20;
+    gap:20px;
+    background-color: #f0ffff;
+    width: 100%;
 }
 
 .container div{
-    margin-bottom: 15px;
-    display: grid;
-    margin: 10px;
+    margin-bottom: 15px;;
 }
 
-.container div p{
+.container div .langage{
     color: rgb(248, 245, 245);
     font-weight: bold;
+    text-transform: uppercase;
     font-size: 9pt;
-    border-radius: 10px;
     margin-bottom: 8px;
-    background-color: rgb(67, 67, 235);
-    width: 60px;
+    background-color: rgb(31, 28, 214);
     padding: 4px;
+    width: 80px;
 }
 
-i{
-    background-color: #e6e6fa;
-    padding: 5px;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
+.container div h1{
+    font-size: 2rem;
+    letter-spacing: -0.1rem;
+    font-weight: 800;
 }
+
+.date{
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+    color: #0C63E7 ;
+}
+
+/* Responsive design sur mobile*/
+
+@media (min-width: 375px) and (max-width: 728px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:20px;
+        background-color: #f0ffff;
+        padding: 2px;
+    }
+
+    .slogan{
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .header-bg{
+        height: 150px;
+    }
+
+    .container div{
+        width: 100%;
+    }
+
+    .container div h1{
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        letter-spacing: normal;
+    }
+
+    .titre-header{
+        color: #f0ffff;
+        background-color: rgba(19, 16, 212, 0.966);
+        border-radius: 10px;
+        padding: 5px;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: normal;
+}
+    
+}
+
+/* Responsive design sur iPad*/
+@media (min-width: 728px) and (max-width: 1021px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:20px;
+        background-color: #f0ffff;
+    }
+
+    .slogan{
+        font-size: 1.5rem;
+        margin: 14px 0;
+    }
+
+    .header-bg{
+        height: 200px;
+    }
+
+    .titre-header{
+        padding: 8px;
+
+    }
+
+    .container div h1{
+        font-weight: 750;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    
+}
+
+/* Responsive design sur Google - Pixel*/
+
+/* Responsive design sur pc tablette*/
+
+/* Responsive design sur pc*/
