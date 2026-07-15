@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from mysnippet.views import SnippetView
+from mysnippet.views import SnippetViewSet
 from rest_framework import routers
 
 # definie les routeurs afin que l'url de l'api soit accessible depuis le front-end
 routeur = routers.DefaultRouter()
-routeur.register(r'snippets', SnippetView, basename='snippets')
+routeur.register(r'snippets', SnippetViewSet, basename='snippets')
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),  # Include the URLs for the Django REST framework's login and logout views
