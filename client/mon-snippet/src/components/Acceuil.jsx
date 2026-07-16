@@ -51,10 +51,7 @@ function Acceuil() {
                             <h1>{title}</h1>
                             <LangueStyle langage={language} />
                             
-                            <CodeSnippet 
-                                    code={code} 
-                                    language={language} 
-                            />
+                            <CodeSnippet code={code} language={language} />
                             <p className="date">Publié le <FormatDjangoDate date={created_at} /></p>
                         </div>
                     ))}
