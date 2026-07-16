@@ -35,13 +35,7 @@ INSTALLED_APPS = [
 ]
 
 # Lien d'interaction pour le front
-
-CORS_ALLOWED_ORIGINS = [os.getenv('SITE_URL')]
-
-CORS_ALLOW_ALL_ORIGINS = False
-
 CORS_ALLOW_CREDENTIALS=True
-
 CSRF_TRUSTED_ORIGINS = [os.getenv('SITE_URL'),]
 
 CORS_ALLOW_METHODS = [
@@ -56,6 +50,7 @@ CORS_ALLOW_METHODS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -68,14 +63,14 @@ ROOT_URLCONF = 'snippet.urls'
 # Autoriser votre frontend React
 CORS_ALLOWED_ORIGINS = [
     os.getenv('SITE_URL'),
+    "http://localhost:5173/",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'snippet/templates'],
+        'DIRS': [BASE_DIR / ''],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,5 +126,6 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
