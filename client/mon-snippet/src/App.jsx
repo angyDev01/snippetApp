@@ -10,7 +10,7 @@ function App() {
     <>
     <div className='main-container'>
       <HeaderBar />
-      <Acceuil/>
+      <Acceuil/> 
     </div>
     </>
   );
