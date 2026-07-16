@@ -101,7 +101,7 @@ body{
         grid-template-columns: 1fr;
         gap:20px;
         background-color: #f0ffff;
-        padding: 5px;
+        padding: 8px;
     }
 
     .slogan{
