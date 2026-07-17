@@ -1,9 +1,5 @@
 import '../index.css';
 
-
-
-
-
 function HeaderBar(){
     const textStyle = {
     fontSize: '24px',

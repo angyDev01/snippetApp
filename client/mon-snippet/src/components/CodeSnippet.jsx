@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import '../index.css';
 
 // On passe le code et le langage en "props"
 function CodeSnippet({ code, language }) {
@@ -13,6 +14,7 @@ function CodeSnippet({ code, language }) {
         customStyle={{ margin: 0 , padding: 10}} // Nettoie les marges par défaut
       >
         {code}
+        
       </SyntaxHighlighter>
     </div>
   );
