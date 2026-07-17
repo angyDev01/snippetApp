@@ -28,8 +28,8 @@ class Snippet(models.Model):
     code = models.TextField()
     language = models.CharField(max_length=50)
     #format de la date : YYYY-MM-DD HH:MM
-    created_at = models.DateTimeField(default=timezone.now)
-    updated_at = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(unique=True, max_length=255, blank=True, null=True)
 
     def __str__(self):

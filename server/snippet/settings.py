@@ -63,7 +63,7 @@ ROOT_URLCONF = 'snippet.urls'
 # Autoriser votre frontend React
 CORS_ALLOWED_ORIGINS = [
     os.getenv('SITE_URL'),
-    "http://localhost:5173/",
+    "http://localhost:5173",
 ]
 
 
