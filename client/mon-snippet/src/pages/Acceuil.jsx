@@ -2,12 +2,12 @@
 import { useState, useEffect } from "react";
 // Importation de l'instance configurée d'Axios pour faire les requêtes HTTP vers l'API
 import api from '../api/axiosInstance';
-import CodeSnippet from './CodeSnippet';
-import LangueStyle from './LangueStyle';
-import FormatDjangoDate from './FormatDjangoDate';
+import CodeSnippet from '../components/CodeSnippet';
+import LangueStyle from '../components/LangueStyle';
+import FormatDjangoDate from '../components/FormatDjangoDate';
 import '../index.css';
-import ClipBoard from "./ClipBoard";
-import { ErrorIcon } from "react-hot-toast";
+import ClipBoard from "../components/ClipBoard";
+import DateDisplay from '../components/DateDisplay';
 
 
 
@@ -65,7 +65,8 @@ function Acceuil() {
                 // Sinon, on génère une liste HTML à partir du tableau 'snippets'
                 <div className="container">
                     {/* transforme chaque objet 'snippet' pour l'affiche */}
-                    {snippets.map(({id, title, language, code, created_at}) => (
+                    {snippets.map(({id, title, language, code, created_at, updated_at}) => (
+                        
                         // La prop 'key' est obligatoire pour que React identifie chaque élément de manière unique
                         <div key={id}>
                             <h1>{title}</h1>
@@ -74,7 +75,11 @@ function Acceuil() {
                                 <CodeSnippet code={code} language={language} />
                                 <ClipBoard textToCopy={code} />
                             </div>
-                            <p className="date">Publié le <FormatDjangoDate date={created_at} /></p>
+                            
+                            <DateDisplay 
+                                created_at={created_at} 
+                                updated_at={updated_at}
+                            />
                         </div>
                     ))}
                 </div>

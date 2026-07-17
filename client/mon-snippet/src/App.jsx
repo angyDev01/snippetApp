@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Acceuil from './components/Acceuil'
-import FormRegisterSnippet from './components/FormRegisterSnippet'
+import Acceuil from './pages/Acceuil'
+import FormRegisterSnippet from './pages/FormRegisterSnippet'
 import HeaderBar from './components/Header';
 import './index.css';
 import { Toaster } from 'react-hot-toast';
