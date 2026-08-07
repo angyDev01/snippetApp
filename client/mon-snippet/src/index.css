@@ -130,7 +130,7 @@ html, body{
         display: grid;
         grid-template-columns: 1fr;
         gap:2px;
-        padding: 0px;
+        padding: 10px;
         aspect-ratio: auto;
     }
     .container div h1{
@@ -141,7 +141,7 @@ html, body{
 
     .slogan{
         font-size: 1rem;
-        margin: 10px 0;
+        margin: 0 0;
     }
 
     .header-bg{
@@ -149,7 +149,7 @@ html, body{
     }
 
     .container div{
-        width: 99.9%;
+        width: 97%;
     }
 
     .container div h1{
@@ -176,12 +176,12 @@ html, body{
         display: grid;
         grid-template-columns: 1fr;
         gap:20px;
-        padding: 10px;
+        padding: 2px;
     }
 
     .slogan{
         font-size: 1rem;
-        margin: 14px 0;
+        margin: 1px 0;
     }
 
     .container div{
