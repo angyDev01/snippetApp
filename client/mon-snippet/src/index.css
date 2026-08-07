@@ -141,7 +141,7 @@ html, body{
 
     .slogan{
         font-size: 1rem;
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     .header-bg{
@@ -149,7 +149,7 @@ html, body{
     }
 
     .container div{
-        width: 100%;
+        width: 99.9%;
     }
 
     .container div h1{
@@ -176,6 +176,7 @@ html, body{
         display: grid;
         grid-template-columns: 1fr;
         gap:20px;
+        padding: 10px;
     }
 
     .slogan{
