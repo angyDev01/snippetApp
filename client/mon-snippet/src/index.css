@@ -154,7 +154,7 @@ html, body{
 
     .container div h1{
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 5px;
         letter-spacing: normal;
     }
@@ -179,7 +179,7 @@ html, body{
     }
 
     .slogan{
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin: 14px 0;
     }
 
@@ -194,7 +194,7 @@ html, body{
 
     .container div h1{
         font-weight: 750;
-        font-size: 1.8rem;
+        font-size: 1rem;
         margin-bottom: 5px;
     }
     
