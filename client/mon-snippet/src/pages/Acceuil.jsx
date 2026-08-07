@@ -37,8 +37,8 @@ function Acceuil() {
     // Si le chargement est en cours, on affiche un message d'attente à l'utilisateur
    if (loading) return (
         <div className="loading">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-            <span className="ml-2 text-gray-500">Chargement...</span>
+            <div className="animate-spin rounded-full h-10 w-10 border-b-5 border-white"></div>
+            {/* <span className="ml-2 text-white"> Chargement...</span> */}
         </div>
         );
 
