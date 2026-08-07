@@ -169,11 +169,13 @@ html, body{
         gap:2px;
         padding: 10px;
         aspect-ratio: auto;
+        margin-left: 12px;
     }
 
     body{
         background-color: #759eb6;
     }
+
 
     .container div h1{
         font-size: 1rem;
