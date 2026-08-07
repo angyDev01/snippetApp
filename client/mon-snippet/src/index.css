@@ -171,7 +171,7 @@ html, body{
 }
 
 /* Responsive design sur iPad*/
-@media screen and (max-width: 1021px) {
+@media ( min-width: 728px) and (max-width: 1021px) {
     .container{
         display: grid;
         grid-template-columns: 1fr;
