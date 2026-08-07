@@ -38,7 +38,7 @@ function Acceuil() {
    if (loading) return (
         <div className="loading">
             <div className="animate-spin rounded-full h-10 w-10 border-b-5 border-white"></div>
-            {/* <span className="ml-2 text-white"> Chargement...</span> */}
+            <span className="text ml-2 text-white"> Chargement...</span>
         </div>
         );
 

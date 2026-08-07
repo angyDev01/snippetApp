@@ -163,6 +163,10 @@ html, body{
         padding-right: 5px;
     }
 
+    .text{
+        display: none;
+    }
+
     .container{
         display: grid;
         grid-template-columns: 1fr;
