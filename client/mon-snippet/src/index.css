@@ -7,24 +7,23 @@
     box-sizing: border-box;
 }
 
-body{
+html, body{
     margin: 0;
+    background-color: #6b6c6d;
     padding: 0;
-    min-height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    overflow-x: hidden;
     width: 100%;
     font-family: 'Inter', sans-serif;
 }
 /* style de l'app principal(App.jsx)*/
 .main-container{
-    background-color: #f0ffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 /* style de l'app header (Header.jsx)*/
@@ -54,15 +53,30 @@ body{
     text-align: center;
 }
 
+/* style loading*/
+.loading{
+    display: flex;
+}
+
+/* Si la récuperation de données echoue */
+
+.no-data{
+    display: flex;
+    min-width: 100;
+    padding: 10px;
+    background-color: #0C63E7;
+    font-weight: 900;
+    position: relative;
+    top: 20px;
+}
 /* Sytle des éléments de l'app Accueil */
 
 .container{
     padding: 20px;
     display: grid;
-    position: relative;
+    /* position: relative; */
     grid-template-columns: repeat(2, 1fr);
     gap:20px;
-    background-color: #f0ffff;
     width: 100%;
 }
 
@@ -76,9 +90,12 @@ body{
     text-transform: uppercase;
     font-size: 9pt;
     margin-bottom: 8px;
-    background-color: rgb(31, 28, 214);
-    padding: 4px;
-    width: 80px;
+    /* background-color: rgb(31, 28, 214); */
+    background-color: #6b7280;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
 }
 
 .container div h1{
@@ -91,7 +108,7 @@ body{
     display: flex;
     gap: 5px;
     font-weight: bold;
-    color: #0C63E7 ;
+    color: #f0eeeb ;
 }
 
 
@@ -100,21 +117,26 @@ body{
 
 .clipboard{
     display: flex;
-    background-color: #eb5612;
+    background-color: #3bf086;
     padding: 3px;
+    margin-top: -20px;
     cursor: pointer;
 }
 
 /* Responsive design sur mobile*/
 
-@media (min-width: 375px) and (max-width: 728px) {
+@media (min-width: 200px) and (max-width: 728px) {
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        gap:20px;
-        background-color: #f0ffff;
-        padding: 10px;
-        aspect-ratio: 1 / -1;
+        gap:2px;
+        padding: 0px;
+        aspect-ratio: auto;
+    }
+    .container div h1{
+        font-size: 1.5rem;
+        letter-spacing: -0.1rem;
+        font-weight: 800;
     }
 
     .slogan{
@@ -139,7 +161,7 @@ body{
 
     .titre-header{
         color: #f0ffff;
-        background-color: rgba(19, 16, 212, 0.966);
+       /*  background-color: rgba(19, 16, 212, 0.966); */
         border-radius: 10px;
         padding: 5px;
         font-family: 'Inter', sans-serif;
@@ -149,12 +171,11 @@ body{
 }
 
 /* Responsive design sur iPad*/
-@media (min-width: 728px) and (max-width: 1021px) {
+@media screen and (max-width: 1021px) {
     .container{
         display: grid;
         grid-template-columns: 1fr;
         gap:20px;
-        background-color: #f0ffff;
     }
 
     .slogan{
