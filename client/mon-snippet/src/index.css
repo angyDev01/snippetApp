@@ -184,6 +184,10 @@ html, body{
         margin: 14px 0;
     }
 
+    .container div{
+        width: 99.9%;
+    }
+
     .header-bg{
         height: 200px;
     }
