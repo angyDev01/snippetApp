@@ -138,10 +138,11 @@ html, body{
         font-size: 1.5rem;
         letter-spacing: -0.1rem;
         font-weight: 800;
+        text-transform: uppercase;
     }
 
     .slogan{
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin: 0 0;
     }
 
@@ -150,7 +151,7 @@ html, body{
     }
 
     .container div{
-        width: 97%;
+        width: 99%;
     }
 
     .container div h1{
@@ -162,9 +163,10 @@ html, body{
 
     .titre-header{
         color: #f0ffff;
-       /*  background-color: rgba(19, 16, 212, 0.966); */
+        background-color: rgba(19, 16, 212, 0.966);
         border-radius: 10px;
         padding: 5px;
+        font-size: 10pt;
         font-family: 'Inter', sans-serif;
         letter-spacing: normal;
 }
