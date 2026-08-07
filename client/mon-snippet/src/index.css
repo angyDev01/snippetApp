@@ -125,10 +125,11 @@ html, body{
 
 /* Responsive design sur mobile*/
 
-@media (min-width: 200px) and (max-width: 728px) {
+@media (min-width: 319px) and (max-width: 480px) {
     .container{
         display: grid;
         grid-template-columns: 1fr;
+        background-color: #1fd30e;
         gap:2px;
         padding: 10px;
         aspect-ratio: auto;
@@ -170,11 +171,58 @@ html, body{
     
 }
 
-/* Responsive design sur iPad*/
-@media ( min-width: 728px) and (max-width: 1021px) {
+/* Responsive design sur ipad*/
+@media (min-width: 481px) and (max-width: 1200px) {
     .container{
         display: grid;
         grid-template-columns: 1fr;
+        background-color: aqua;
+        gap:2px;
+        padding: 10px;
+        aspect-ratio: auto;
+    }
+    .container div h1{
+        font-size: 1.5rem;
+        letter-spacing: -0.1rem;
+        font-weight: 800;
+    }
+
+    .slogan{
+        font-size: 1rem;
+        margin: 0 0;
+    }
+
+    .header-bg{
+        height: 150px;
+    }
+
+    .container div{
+        width: 97%;
+    }
+
+    .container div h1{
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        letter-spacing: normal;
+    }
+
+    .titre-header{
+        color: #f0ffff;
+       /*  background-color: rgba(19, 16, 212, 0.966); */
+        border-radius: 10px;
+        padding: 5px;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: normal;
+}
+    
+}
+/* Responsive design sur laptop*/
+@media ( min-width: 1201px) and (max-width: 1600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: blue;
         gap:20px;
         padding: 2px;
     }
